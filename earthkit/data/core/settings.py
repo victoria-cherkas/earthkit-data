@@ -23,7 +23,7 @@ from earthkit.data.utils.humanize import as_bytes, as_percent, as_seconds
 
 LOG = logging.getLogger(__name__)
 
-DOT_EARTHKIT_DATA = os.path.expanduser("~/.earthkit_data")
+DOT_EARTHKIT_DATA = os.getenv('DOT_EARTHKIT_DATA_PATH', os.path.expanduser("~/.earthkit_data"))
 
 
 class Setting:
